@@ -37,5 +37,11 @@ for (var i = 0; i <= passwordLength; i++) {
  var randomNumber = Math.floor(Math.random() * chars.length);
 password += chars.substring(randomNumber, randomNumber +1);
 }
-      document.getElementById("password").value = password;
+
+if (length < 101 || length > 11) {
+  passwordText = length.value; 
+} else if (length < 12 || length > 100) {
+  var length = window.prompt("Enter length of password 12-100");
+} else {
+  console.log("it worked");
 }
